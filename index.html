@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM - The Encyclopedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="index.html"><img src="Multimedia/logo.png" alt="Logo" width="80"></a></div>
+        <nav>
+            <ul>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="dropdown-toggle">
+                    <img src="Multimedia/user.png" alt="User Icon">
+                    &#9660;
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#login">Log In</a></li>
+                    <li><a href="#logout">Log Out</a></li>
+                    <li><a href="#signup">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <!-- Sección Izquierda -->
+            <div class="left-section">
+                <section id="about-us">
+                    <h1>About the JDM Encyclopedia</h1>
+                    <p>Welcome to JDM Encyclopedia, your ultimate source of knowledge about the fascinating world of
+                        Japanese automobiles. From iconic classics of the 1970s to innovative kei cars and
+                        high-performance machines dominating the tracks, we explore every detail that defines the
+                        essence of the Japanese Domestic Market (JDM).</p>
+                </section>
+
+                <section id="galeria">
+                    <h2>Gallery</h2>
+                    <div class="slider">
+                        <button class="prev">&lt;</button>
+                        <div class="images">
+                            <img src="Multimedia/DSC05774-1200x800.jpg" alt="Imagen 1">
+                            <img src="Multimedia/DSC05958-1200x800.jpg" alt="Imagen 2">
+                            <img src="Multimedia/N-RobbieAE86-003-1200x800.jpg" alt="Imagen 3">
+                        </div>
+                        <button class="next">&gt;</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sección Derecha -->
+            <aside class="right-section">
+                <section id="relevant-news">
+                    <h2><a href="news.html">Relevant News</a></h2>
+                    <div class="news-scroll">
+                        <div class="news-card">
+                            <h3>JDM trends for 2025</h3>
+                            <p>Electric conversions gain popularity...</p>
+                        </div>
+                        <div class="news-card">
+                            <h3>JDM trends for 2025</h3>
+                            <p>Electric conversions gain popularity...</p>
+                        </div>
+                        <div class="news-card">
+                            <h3>JDM trends for 2025</h3>
+                            <p>Electric conversions gain popularity...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="upcoming-events">
+                    <h2><a href="calendar.html">Upcoming Events</a></h2>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prev-month">&lt;</button>
+                            <h3 id="current-month"></h3>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-grid"></div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Foro -->
+        <section id="foro">
+            <h2>Forum - Hot topics</h2>
+            <div class="temas">
+                <article class="tema-card">
+                    <h3>2JZ Engine Swap Guide</h3>
+                    <p>Step-by-step tutorial for Toyota engine swaps...</p>
+                </article>
+                <article class="tema-card">
+                    <h3>Best JDM Mods 2024</h3>
+                    <p>Top modifications trending this year...</p>
+                </article>
+                <article class="tema-card">
+                    <h3>Kei Cars Revival</h3>
+                    <p>Why micro cars are gaining popularity...</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact - All rights reserved to JDM Encyclopedia</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/calendar.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
