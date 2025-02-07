@@ -15,7 +15,8 @@ document.querySelector('.next').addEventListener('click', () => {
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); 
     menuToggle.classList.toggle('active');
     mobileNav.classList.toggle('active');
 });
