@@ -676,7 +676,6 @@ footer {
     }
 }
 
-/* Efecto hamburguesa activo */
 .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
