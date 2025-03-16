@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JDM - The Encyclopedia</title>
+    <title>JDM Encyclopedia - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,56 +15,36 @@
     <header>
         <div class="logo"><a href="index.html"><img src="Multimedia/logo.png" alt="Logo" width="80"></a></div>
         
-        <!-- Menú Mobile -->
-        <div class="mobile-menu">
-            <button class="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <div class="mobile-nav">
-                <nav>
-                    <ul>
-                        <li><a href="cars.html">Cars</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="history.html">History</a></li>
-                        <li><a href="forum.html">Forum</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class="account-item">
-                            <a href="#account">
-                                <img src="Multimedia/user.png" alt="Account" width="20">
-                                Account
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Menú Desktop -->
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="cars.html">Cars</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="user-menu">
-            <div class="dropdown">
-                <button class="dropdown-toggle">
-                    <img src="Multimedia/user.png" alt="User Icon">
-                    &#9660;
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Multimedia/logo.png" alt="Logo JDM Encyclopedia" width="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#login">Log In</a></li>
-                    <li><a href="#logout">Log Out</a></li>
-                    <li><a href="#signup">Sign Up</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cars.html">Autos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="forum.html">Foro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                    </ul>
+                    <div class="dropdown ms-3">
+                        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                            <img src="Multimedia/user.png" alt="Usuario" width="30">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#login">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#logout">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#signup">Registrarse</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -146,13 +128,42 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>Contact - All rights reserved to JDM Encyclopedia</p>
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Explorar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="cars.html" class="text-white text-decoration-none">Autos</a></li>
+                        <li><a href="history.html" class="text-white text-decoration-none">Historia</a></li>
+                        <li><a href="forum.html" class="text-white text-decoration-none">Foro</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Términos de uso</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bx bx-envelope"></i> contacto@jdmencyclopedia.com</li>
+                        <li><i class="bx bx-phone"></i> +54 11 5555-5555</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2024 JDM Encyclopedia - Todos los derechos reservados</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/calendar.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

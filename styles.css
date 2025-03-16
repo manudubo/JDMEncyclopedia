@@ -9,6 +9,10 @@
     /* Colores complementarios */
     --texto-claro: #ffffff;
     --fondo-secundario: #f5f5f5;
+    
+    /* Nuevas variables para timeline */
+    --timeline-width: 6px;
+    --timeline-color: linear-gradient(to bottom, var(--jarrch) 0%, var(--dark-red) 100%);
 }
 
 * {
@@ -21,11 +25,12 @@
 /* GENERAL STYLES */
 /* =================== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: var(--fondo-secundario);
     position: relative;
+    color: #333;
 }
 
 body::before {
@@ -44,8 +49,189 @@ body::before {
 }
 
 /* =================== */
-/* HEADER & NAVIGATION */
+/* TIMELINE CORREGIDA */
 /* =================== */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: var(--timeline-width);
+    background: var(--timeline-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.timeline-item {
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+.timeline-content {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    width: calc(50% - 60px);
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--dark-red);
+    margin: 20px 0;
+}
+
+.timeline-item.left .timeline-content {
+    float: left;
+    margin-left: 20px;
+}
+
+.timeline-item.right .timeline-content {
+    float: right;
+    margin-right: 20px;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 2;
+    border: 3px solid white;
+    background: var(--jarrch);
+    color: white;
+}
+
+.timeline-item.left .timeline-icon {
+    right: -75px;
+}
+
+.timeline-item.right .timeline-icon {
+    left: -75px;
+}
+
+.timeline-date {
+    position: absolute;
+    top: -15px;
+    background: var(--jarrch);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    z-index: 3;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+.timeline-item.left .timeline-date {
+    right: calc(50% + 45px);
+}
+
+.timeline-item.right .timeline-date {
+    left: calc(50% + 45px);
+}
+
+.timeline-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.timeline-image:hover img {
+    transform: scale(1.05);
+}
+
+.list-group-item {
+    border-left: 3px solid var(--jarrch);
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    transform: translateX(10px);
+    border-left-width: 6px;
+}
+
+/* =================== */
+/* RESPONSIVE TIMELINE */
+/* =================== */
+@media (max-width: 992px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin: 20px 0 !important;
+        float: none;
+    }
+    
+    .timeline-item.left .timeline-icon,
+    .timeline-item.right .timeline-icon {
+        left: 15px;
+        right: auto;
+        top: 30px;
+    }
+    
+    .timeline-date {
+        position: static;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    
+    .timeline-item.left .timeline-date,
+    .timeline-item.right .timeline-date {
+        left: auto;
+        right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-image {
+        height: 150px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .list-group-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* =================== */
+/* RESTANTE DEL CSS (igual a tu versión) */
+/* =================== */
+/* HEADER & NAVIGATION */
 header {
     display: flex;
     justify-content: space-between;
@@ -190,9 +376,7 @@ header {
     border-radius: 50%;
 }
 
-/* =================== */
 /* USER MENU DROPDOWN */
-/* =================== */
 .user-menu {
     position: relative;
 }
@@ -266,9 +450,7 @@ header {
     display: block;
 }
 
-/* =================== */
 /* MAIN CONTENT AREAS */
-/* =================== */
 main {
     background: var(--fondo-secundario);
     border-radius: 8px;
@@ -491,9 +673,7 @@ main {
     font-size: 1.3em;
 }
 
-/* =================== */
 /* FILTROS Y ORDENAMIENTO */
-/* =================== */
 .filters {
     display: flex;
     gap: 1em;
@@ -522,9 +702,7 @@ main {
     background: var(--fondo-secundario);
 }
 
-/* =================== */
 /* LISTADO DE MARCAS */
-/* =================== */
 .brands-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -552,9 +730,7 @@ main {
     display: inline-block;
 }
 
-/* =================== */
 /* SECCIONES FULL WIDTH */
-/* =================== */
 .full-width-section {
     max-width: 1200px;
     margin: 2em auto;
@@ -582,9 +758,20 @@ footer {
     border-radius: 4px;
 }
 
-/* =================== */
-/* RESPONSIVE DESIGN */
-/* =================== */
+/* MENU TOGGLE ANIMATION */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* RESPONSIVE GENERAL */
 @media (max-width: 1200px) {
     .main-content {
         padding: 1.5em;
@@ -674,16 +861,4 @@ footer {
     .logo img {
         width: 60px;
     }
-}
-
-.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
 }

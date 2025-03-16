@@ -1,10 +1,40 @@
-Pagina web JDM - Encyclopedia
-Home con navbar conteniendo Cars, News, History, Forum, Contact y Account
-En Index.html se agregaron 3 sectores: Sector izquierdo, con "about us" y "gallery" (Slider hecho en JavaScripty), 
-Sector derecho con "Relevant News" y "Upcoming events" (calendario con JavaScript)
-Sector inferios contiene cards con "Forum hot topics"
-Todo estilizado en style.css
-Se agrego listado de Marcas japonesas en cars.html
+# JDM Encyclopedia 🏎️
+> Plataforma educativa sobre la cultura automotriz japonesa (JDM)
 
-Se aplico diseño responsive para mobile, y se agrego menu desplegable del lado derecho.
+## 📋 Requisitos Cumplidos (Entrega 2)
 
+### Estructura HTML Avanzada
+✅ Maquetación con Bootstrap 5 + Grid/Flexbox  
+✅ 6 páginas HTML completas e interconectadas  
+✅ Semántica W3C validada  
+✅ Navegación responsive
+
+### CSS Avanzado
+🎨 Variables CSS personalizadas  
+✨ Efectos hover y transiciones  
+📱 Media Queries para mobile-first  
+🧩 Componentes reutilizables
+
+### GitHub
+🔀 Historial de commits significativo  
+📂 Estructura de directorios organizada  
+🌍 GitHub Pages habilitado  
+🚫 .gitignore configurado
+
+## 🛠 Tecnologías Utilizadas
+- **Frontend**: 
+  - Bootstrap 5
+  - CSS Grid/Flexbox
+  - Vanilla JavaScript
+- **Herramientas**:
+  - Git & GitHub
+  - Boxicons
+  - Optimización de imágenes
+
+## 🚀 Características Principales
+- Catálogo interactivo de marcas JDM
+- Línea temporal histórica interactiva
+- Foro comunitario con temas en tiempo real
+- Sistema de filtrado y ordenamiento
+- Galería con slider automático
+- Calendario de eventos personalizado
