@@ -1,0 +1,443 @@
+
+// TIMELINE
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 40px 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(to bottom, $color-contrast 0%, $color-accent 100%);
+    top: 0; bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+}
+
+.timeline-item {
+  padding: 30px 0;
+  position: relative;
+  width: 100%;
+  clear: both;
+
+  .timeline-content {
+    position: relative;
+    background: $color-white;
+    border-radius: 8px;
+    width: calc(50% - 60px);
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid $color-accent;
+    margin: 20px 0;
+  }
+
+  &.left .timeline-content {
+    float: left;
+    margin-left: 20px;
+  }
+  &.right .timeline-content {
+    float: right;
+    margin-right: 20px;
+  }
+
+  .timeline-icon {
+    position: absolute;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    z-index: 2;
+    border: 3px solid $color-white;
+    background: $color-contrast;
+    color: $color-white;
+  }
+  &.left .timeline-icon { right: -75px; }
+  &.right .timeline-icon { left: -75px; }
+
+  .timeline-date {
+    position: absolute;
+    top: -15px;
+    background: $color-contrast;
+    color: $color-white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    z-index: 3;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  }
+  &.left .timeline-date {
+    right: calc(50% + 45px);
+  }
+  &.right .timeline-date {
+    left: calc(50% + 45px);
+  }
+
+  .timeline-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    .timeline-content {
+      width: 100%;
+      margin: 20px 0 !important;
+      float: none;
+    }
+    .timeline-icon {
+      left: 15px; right: auto; top: 30px;
+    }
+    .timeline-date {
+      position: static;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+  }
+}
+
+// SLIDER
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba($color-black, 0.1);
+
+  .images {
+    display: flex;
+    transition: transform 0.5s ease;
+
+    img {
+      width: 100%;
+      min-width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  .prev,
+  .next {
+    @include transition(background, 0.3s);
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba($color-black, 0.6);
+    color: $color-white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+
+    &:hover {
+      background: rgba($color-black, 0.8);
+    }
+  }
+  .prev { left: 20px; }
+  .next { right: 20px; }
+}
+
+// NEWS CARDS
+.news-card {
+  min-width: 280px;
+  padding: 1.2em;
+  border: 1px solid rgba($color-black, 0.1);
+  border-radius: 8px;
+  background: rgba($color-white, 0.9);
+  box-shadow: 0 2px 6px rgba($color-black, 0.05);
+
+  h3 {
+    color: $color-contrast;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+}
+.news-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5em;
+  padding-bottom: 1em;
+  scrollbar-width: thin;
+}
+.news-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+// CALENDAR
+.calendar-container {
+  padding: 1em 0;
+}
+.calendar-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.2em;
+
+  button {
+    background: $color-contrast;
+    color: $color-white;
+    border: 1px solid $color-secondary;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    @include transition(background, 0.3s);
+
+    &:hover {
+      background: darken($color-contrast, 10%);
+    }
+  }
+}
+
+#current-month {
+  margin: 0;
+  color: $color-secondary;
+  font-weight: bold;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(35px, 1fr));
+  gap: 4px;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgba($color-black, 0.1);
+  border-radius: 6px;
+  font-size: 0.9em;
+  background: rgba($color-white, 0.9);
+  @include transition(background, 0.2s);
+
+  &.current-day {
+    background: #ffcccc;
+    border: 2px solid #f04;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background: rgba($color-white, 0.95);
+  }
+}
+.calendar-day-empty {
+  visibility: hidden;
+}
+
+// FORO TEMAS
+#foro {
+  padding: 2em;
+  background: rgba($color-white, 0.85);
+  margin: 2em auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba($color-black, 0.08);
+  max-width: 1400px;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba($color-black, 0.1);
+
+  .temas {
+    display: flex;
+    gap: 2em;
+    overflow-x: auto;
+    padding: 1em 0;
+
+    .tema-card {
+      flex: 0 0 320px;
+      border: 3px dashed $color-accent;
+      border-radius: 12px;
+      padding: 1.5em;
+      background: rgba($color-white, 0.9);
+      @include transition(transform, 0.3s);
+      backdrop-filter: blur(2px);
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        color: #f04;
+        margin-top: 0;
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+// FILTROS Y ORDENAMIENTO
+.filters {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+.filter-btn {
+  background: $color-secondary;
+  color: $color-white;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition(background, 0.3s);
+
+  &.active {
+    background: $color-contrast;
+  }
+}
+
+#sort-order {
+  padding: 0.7em;
+  border: 2px solid $color-accent;
+  border-radius: 5px;
+  background: $color-bg;
+}
+
+// LISTADO DE MARCAS
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+.brand-card {
+  background: rgba($color-white, 0.9);
+  padding: 1.5em;
+  border-radius: 8px;
+  border: 2px solid $color-accent;
+  @include transition(transform, 0.3s);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .popular-tag {
+    background: $color-contrast;
+    color: $color-white;
+    padding: 0.3em 0.8em;
+    border-radius: 15px;
+    font-size: 0.8em;
+    display: inline-block;
+  }
+}
+
+// OTRAS CLASES GENERALES
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  gap: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-section {
+  width: 65%;
+  background: rgba($color-white, 0.85);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba($color-black, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.right-section {
+  width: 28%;
+  min-width: auto;
+  padding: 1.5em;
+  border: 1px solid rgba($color-black, 0.1);
+  border-radius: 12px;
+  background: rgba($color-white, 0.85);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 8px rgba($color-black, 0.08);
+  overflow: hidden;
+
+  h2 a {
+    color: $color-secondary !important;
+    text-decoration: none;
+  }
+}
+
+// SCROLLBAR personal
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-contrast;
+  border-radius: 4px;
+}
+
+// MOBILE MENU (si la usas)
+.mobile-nav {
+  display: none; // solo se muestra con JS .active
+  // etc.
+}
+
+// MEDIA QUERIES
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .left-section,
+  .right-section {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+  .slider img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  .tema-card {
+    flex: 0 0 90%;
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider img {
+    height: 200px;
+  }
+  .news-card {
+    min-width: 90%;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(30px, 1fr));
+  }
+  .calendar-day {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+}

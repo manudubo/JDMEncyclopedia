@@ -1,0 +1,44 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 70px; 
+  font-family: $font-body;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: $color-bg;
+  color: $color-secondary;
+  position: relative;
+}
+
+// Enlaces
+a {
+  text-decoration: none;
+  color: $color-contrast;
+
+  &:hover {
+    color: darken($color-contrast, 10%);
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('../img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  opacity: 0.4;
+  z-index: -1;
+}

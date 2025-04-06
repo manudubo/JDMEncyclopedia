@@ -1,0 +1,25 @@
+
+header {
+  // Ajustes para header con navbar:
+  .navbar-brand img {
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+footer {
+  background-color: darken($color-primary, 10%);
+  color: $color-white;
+  margin-top: 3em;
+  padding: 2em 0;
+
+  a {
+    color: $color-white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
