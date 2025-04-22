@@ -1,200 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="JDM Encyclopedia - Historia"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JDM Encyclopedia - Historia</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Estilos compilados (SCSS) -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <!-- Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">
-            <img
-              src="../assets/img/logo.png"
-              alt="Logo JDM Encyclopedia"
-              width="80"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link" href="cars.html">Autos</a></li>
-              <li class="nav-item"><a class="nav-link" href="news.html">Noticias</a></li>
-              <li class="nav-item">
-                <a class="nav-link active" href="history.html">Historia</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="forum.html">Foro</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="JDM Encyclopedia - Historia" />
+  <meta name="keywords" content="JDM, autos, tuning, foro, noticias, historia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDM Encyclopedia - Historia</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Estilos compilados (SCSS) -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/logo.png" alt="Logo JDM Encyclopedia" width="80" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="cars.html">Autos</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">Noticias</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="history.html">Historia</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="forum.html">Foro</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+          </ul>
+          <div class="dropdown ms-3">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+              <img src="../assets/img/user.png" alt="Usuario" width="30" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+              <li><a class="dropdown-item" href="../index.html">Cerrar Sesión</a></li>
+              <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
             </ul>
-            <div class="dropdown ms-3">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <img src="../assets/img/user.png" alt="Usuario" width="30" />
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
-                <li><a class="dropdown-item" href="../index.html">Cerrar Sesión</a></li>
-                <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5 pt-4">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h1 class="display-4 fw-bold text-danger">Historia del JDM</h1>
+        <p class="lead">Un viaje a través de las décadas</p>
+      </div>
+
+      <div class="col-12">
+        <div class="timeline">
+          <!-- Década 1960 -->
+          <div class="timeline-item left">
+            <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
+              <div class="timeline-icon bg-danger text-white">
+                <i class="bx bx-time"></i>
+              </div>
+              <h3 class="text-danger fw-bold mb-3">1960s - Los Orígenes</h3>
+              <div class="timeline-image mb-3">
+                <img src="../assets/img/1960.jpg" alt="Década 1960" class="img-fluid rounded" />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Nacimiento de los primeros deportivos japoneses</li>
+                <li class="list-group-item">• Toyota 2000GT establece nuevos estándares</li>
+                <li class="list-group-item">• Primeras competiciones locales</li>
               </ul>
             </div>
+            <div class="timeline-date">
+              <span class="badge bg-danger rounded-pill">1960-1969</span>
+            </div>
+          </div>
+
+          <!-- Década 1980 -->
+          <div class="timeline-item right">
+            <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
+              <div class="timeline-icon bg-danger text-white">
+                <i class="bx bx-tachometer"></i>
+              </div>
+              <h3 class="text-danger fw-bold mb-3">1980s - La Era Dorada</h3>
+              <div class="timeline-image mb-3">
+                <img src="../assets/img/1980.jpg" alt="Década 1980" class="img-fluid rounded" />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Lanzamiento del Mazda RX-7</li>
+                <li class="list-group-item">• Nacimiento del Nissan Skyline GT-R</li>
+                <li class="list-group-item">• Cultura tuning en ascenso</li>
+              </ul>
+            </div>
+            <div class="timeline-date">
+              <span class="badge bg-danger rounded-pill">1980-1989</span>
+            </div>
+          </div>
+
+          <!-- Década 2000 -->
+          <div class="timeline-item left">
+            <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
+              <div class="timeline-icon bg-danger text-white">
+                <i class="bx bx-globe"></i>
+              </div>
+              <h3 class="text-danger fw-bold mb-3">2000s - Globalización</h3>
+              <div class="timeline-image mb-3">
+                <img src="../assets/img/2000_1423x800.jpg" alt="Década 2000" class="img-fluid rounded" />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Exportación masiva de modelos JDM</li>
+                <li class="list-group-item">• Popularidad de drifting internacional</li>
+                <li class="list-group-item">• Hibridación y nuevas tecnologías</li>
+              </ul>
+            </div>
+            <div class="timeline-date">
+              <span class="badge bg-danger rounded-pill">2000-2009</span>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
+  </main>
 
-    <main class="container mt-5 pt-4">
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
       <div class="row">
-        <div class="col-12 text-center mb-5">
-          <h1 class="display-4 fw-bold text-danger">Historia del JDM</h1>
-          <p class="lead">Un viaje a través de las décadas</p>
+        <div class="col-md-4 mb-3">
+          <h5>Explorar</h5>
+          <ul class="list-unstyled">
+            <li><a href="cars.html" class="text-white text-decoration-none">Autos</a></li>
+            <li><a href="history.html" class="text-white text-decoration-none">Historia</a></li>
+            <li><a href="forum.html" class="text-white text-decoration-none">Foro</a></li>
+          </ul>
         </div>
-
-        <div class="col-12">
-          <div class="timeline">
-            <!-- Década 1960 -->
-            <div class="timeline-item left">
-              <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
-                <div class="timeline-icon bg-danger text-white">
-                  <i class="bx bx-time"></i>
-                </div>
-                <h3 class="text-danger fw-bold mb-3">1960s - Los Orígenes</h3>
-                <div class="timeline-image mb-3">
-                  <img
-                    src="../assets/img/1960.jpg"
-                    alt="Década 1960"
-                    class="img-fluid rounded"
-                  />
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">• Nacimiento de los primeros deportivos japoneses</li>
-                  <li class="list-group-item">• Toyota 2000GT establece nuevos estándares</li>
-                  <li class="list-group-item">• Primeras competiciones locales</li>
-                </ul>
-              </div>
-              <div class="timeline-date">
-                <span class="badge bg-danger rounded-pill">1960-1969</span>
-              </div>
-            </div>
-
-            <!-- Década 1980 -->
-            <div class="timeline-item right">
-              <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
-                <div class="timeline-icon bg-danger text-white">
-                  <i class="bx bx-tachometer"></i>
-                </div>
-                <h3 class="text-danger fw-bold mb-3">1980s - La Era Dorada</h3>
-                <div class="timeline-image mb-3">
-                  <img
-                    src="../assets/img/1980.jpg"
-                    alt="Década 1980"
-                    class="img-fluid rounded"
-                  />
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">• Lanzamiento del Mazda RX-7</li>
-                  <li class="list-group-item">• Nacimiento del Nissan Skyline GT-R</li>
-                  <li class="list-group-item">• Cultura tuning en ascenso</li>
-                </ul>
-              </div>
-              <div class="timeline-date">
-                <span class="badge bg-danger rounded-pill">1980-1989</span>
-              </div>
-            </div>
-
-            <!-- Década 2000 -->
-            <div class="timeline-item left">
-              <div class="timeline-content bg-white p-4 shadow-lg rounded-3">
-                <div class="timeline-icon bg-danger text-white">
-                  <i class="bx bx-globe"></i>
-                </div>
-                <h3 class="text-danger fw-bold mb-3">2000s - Globalización</h3>
-                <div class="timeline-image mb-3">
-                  <img
-                    src="../assets/img/2000_1423x800.jpg"
-                    alt="Década 2000"
-                    class="img-fluid rounded"
-                  />
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">• Exportación masiva de modelos JDM</li>
-                  <li class="list-group-item">• Popularidad de drifting internacional</li>
-                  <li class="list-group-item">• Hibridación y nuevas tecnologías</li>
-                </ul>
-              </div>
-              <div class="timeline-date">
-                <span class="badge bg-danger rounded-pill">2000-2009</span>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-4 mb-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Términos de uso</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bx bx-envelope"></i> contacto@jdmencyclopedia.com</li>
+            <li><i class="bx bx-phone"></i> +54 11 5555-5555</li>
+          </ul>
         </div>
       </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white mt-5 py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <h5>Explorar</h5>
-            <ul class="list-unstyled">
-              <li><a href="cars.html" class="text-white text-decoration-none">Autos</a></li>
-              <li><a href="history.html" class="text-white text-decoration-none">Historia</a></li>
-              <li><a href="forum.html" class="text-white text-decoration-none">Foro</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 mb-3">
-            <h5>Legal</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-white text-decoration-none">Términos de uso</a></li>
-              <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5>Contacto</h5>
-            <ul class="list-unstyled">
-              <li><i class="bx bx-envelope"></i> contacto@jdmencyclopedia.com</li>
-              <li><i class="bx bx-phone"></i> +54 11 5555-5555</li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <p class="mb-0">&copy; 2024 JDM Encyclopedia - Todos los derechos reservados</p>
-        </div>
+      <div class="text-center mt-4">
+        <p class="mb-0">&copy; 2024 JDM Encyclopedia - Todos los derechos reservados</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    ></script>
-    <script src="../assets/js/script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
 </html>

@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="JDM Encyclopedia - Inicio" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JDM Encyclopedia - Inicio</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Estilos compilados (SCSS) -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img
-              src="assets/img/logo.png"
-              alt="Logo JDM Encyclopedia"
-              width="80"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/cars.html">Autos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/news.html">Noticias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/history.html">Historia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/forum.html">Foro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/contact.html">Contacto</a>
-              </li>
-            </ul>
-            <div class="dropdown ms-3">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <img src="assets/img/user.png" alt="Usuario" width="30" />
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="pages/login.html">Iniciar Sesión</a></li>
-                <li><a class="dropdown-item" href="#logout">Cerrar Sesión</a></li>
-                <li><a class="dropdown-item" href="pages/register.html">Registrarse</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="JDM Encyclopedia - Inicio" />
+  <meta name="keywords" content="JDM, autos, tuning, foro, noticias, historia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDM Encyclopedia - Inicio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Estilos compilados (SCSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
 
-    <main>
-      <div class="main-content">
-        <!-- Sección Izquierda -->
-        <div class="left-section">
-          <section id="about-us">
-            <h1>About the JDM Encyclopedia</h1>
-            <p>
-              Welcome to JDM Encyclopedia, your ultimate source of knowledge
-              about the fascinating world of Japanese automobiles. From iconic
-              classics of the 1970s to innovative kei cars and high-performance
-              machines dominating the tracks, we explore every detail that
-              defines the essence of the Japanese Domestic Market (JDM).
-            </p>
-          </section>
-
-          <section id="galeria">
-            <h2>Gallery</h2>
-            <div class="slider">
-              <button class="prev">&lt;</button>
-              <div class="images">
-                <!-- Ajusta nombres a tus imágenes reales -->
-                <img src="assets/img/DSC05774-1200x800.jpg" alt="Imagen 1" />
-                <img src="assets/img/DSC05958-1200x800.jpg" alt="Imagen 2" />
-                <img src="assets/img/N-RobbieAE86-003-1200x800.jpg" alt="Imagen 3" />
-              </div>
-              <button class="next">&gt;</button>
-            </div>
-          </section>
-        </div>
-
-        <!-- Sección Derecha -->
-        <aside class="right-section">
-          <section id="relevant-news">
-            <h2><a href="pages/news.html">Relevant News</a></h2>
-            <div class="news-scroll">
-              <div class="news-card">
-                <h3>JDM trends for 2025</h3>
-                <p>Electric conversions gain popularity...</p>
-              </div>
-              <div class="news-card">
-                <h3>JDM trends for 2025</h3>
-                <p>Electric conversions gain popularity...</p>
-              </div>
-              <div class="news-card">
-                <h3>JDM trends for 2025</h3>
-                <p>Electric conversions gain popularity...</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="upcoming-events">
-            <h2><a href="pages/news.html">Upcoming Events</a></h2>
-            <div class="calendar-container">
-              <div class="calendar-header">
-                <button id="prev-month">&lt;</button>
-                <h3 id="current-month"></h3>
-                <button id="next-month">&gt;</button>
-              </div>
-              <div class="calendar-grid"></div>
-            </div>
-          </section>
-        </aside>
-      </div>
-
-      <!-- Foro -->
-      <section id="foro">
-        <h2>Forum - Hot topics</h2>
-        <div class="temas">
-          <article class="tema-card">
-            <h3>2JZ Engine Swap Guide</h3>
-            <p>Step-by-step tutorial for Toyota engine swaps...</p>
-          </article>
-          <article class="tema-card">
-            <h3>Best JDM Mods 2024</h3>
-            <p>Top modifications trending this year...</p>
-          </article>
-          <article class="tema-card">
-            <h3>Kei Cars Revival</h3>
-            <p>Why micro cars are gaining popularity...</p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white mt-5 py-4">
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <h5>Explorar</h5>
-            <ul class="list-unstyled">
-              <li><a href="pages/cars.html" class="text-white text-decoration-none">Autos</a></li>
-              <li><a href="pages/history.html" class="text-white text-decoration-none">Historia</a></li>
-              <li><a href="pages/forum.html" class="text-white text-decoration-none">Foro</a></li>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo JDM Encyclopedia" width="80" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/cars.html">Autos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/history.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forum.html">Foro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contact.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="dropdown ms-3">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+              <img src="assets/img/user.png" alt="Usuario" width="30" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="pages/login.html">Iniciar Sesión</a></li>
+              <li><a class="dropdown-item" href="#logout">Cerrar Sesión</a></li>
+              <li><a class="dropdown-item" href="pages/register.html">Registrarse</a></li>
             </ul>
           </div>
-          <div class="col-md-4 mb-3">
-            <h5>Legal</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-white text-decoration-none">Términos de uso</a></li>
-              <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5>Contacto</h5>
-            <ul class="list-unstyled">
-              <li><i class="bx bx-envelope"></i> contacto@jdmencyclopedia.com</li>
-              <li><i class="bx bx-phone"></i> +54 11 5555-5555</li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <p class="mb-0">&copy; 2024 JDM Encyclopedia - Todos los derechos reservados</p>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <!-- Scripts -->
-    <script src="assets/js/calendar.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    ></script>
-  </body>
+  <main>
+    <div class="main-content">
+      <!-- Sección Izquierda -->
+      <div class="left-section">
+        <section id="about-us">
+          <h1>About the JDM Encyclopedia</h1>
+          <p>
+            Welcome to JDM Encyclopedia, your ultimate source of knowledge
+            about the fascinating world of Japanese automobiles. From iconic
+            classics of the 1970s to innovative kei cars and high-performance
+            machines dominating the tracks, we explore every detail that
+            defines the essence of the Japanese Domestic Market (JDM).
+          </p>
+        </section>
+
+        <section id="galeria">
+          <h2>Gallery</h2>
+          <div class="slider">
+            <button class="prev">&lt;</button>
+            <div class="images">
+              <!-- Ajusta nombres a tus imágenes reales -->
+              <img src="assets/img/DSC05774-1200x800.jpg" alt="Imagen 1" />
+              <img src="assets/img/DSC05958-1200x800.jpg" alt="Imagen 2" />
+              <img src="assets/img/N-RobbieAE86-003-1200x800.jpg" alt="Imagen 3" />
+            </div>
+            <button class="next">&gt;</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sección Derecha -->
+      <aside class="right-section">
+        <section id="relevant-news">
+          <h2><a href="pages/news.html">Relevant News</a></h2>
+          <div class="news-scroll">
+            <div class="news-card">
+              <h3>JDM trends for 2025</h3>
+              <p>Electric conversions gain popularity...</p>
+            </div>
+            <div class="news-card">
+              <h3>JDM trends for 2025</h3>
+              <p>Electric conversions gain popularity...</p>
+            </div>
+            <div class="news-card">
+              <h3>JDM trends for 2025</h3>
+              <p>Electric conversions gain popularity...</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="upcoming-events">
+          <h2><a href="pages/news.html">Upcoming Events</a></h2>
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <button id="prev-month">&lt;</button>
+              <h3 id="current-month"></h3>
+              <button id="next-month">&gt;</button>
+            </div>
+            <div class="calendar-grid"></div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- Foro -->
+    <section id="foro">
+      <h2>Forum - Hot topics</h2>
+      <div class="temas">
+        <article class="tema-card">
+          <h3>2JZ Engine Swap Guide</h3>
+          <p>Step-by-step tutorial for Toyota engine swaps...</p>
+        </article>
+        <article class="tema-card">
+          <h3>Best JDM Mods 2024</h3>
+          <p>Top modifications trending this year...</p>
+        </article>
+        <article class="tema-card">
+          <h3>Kei Cars Revival</h3>
+          <p>Why micro cars are gaining popularity...</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Explorar</h5>
+          <ul class="list-unstyled">
+            <li><a href="pages/cars.html" class="text-white text-decoration-none">Autos</a></li>
+            <li><a href="pages/history.html" class="text-white text-decoration-none">Historia</a></li>
+            <li><a href="pages/forum.html" class="text-white text-decoration-none">Foro</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Términos de uso</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bx bx-envelope"></i> contacto@jdmencyclopedia.com</li>
+            <li><i class="bx bx-phone"></i> +54 11 5555-5555</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="mb-0">&copy; 2024 JDM Encyclopedia - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

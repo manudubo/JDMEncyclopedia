@@ -1,0 +1,14 @@
+// assets/scss/_footer.scss
+
+footer {
+    background-color: darken($color-bg, 10%);
+    color: $color-white;
+    .container {
+      .text-center {
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  

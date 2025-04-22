@@ -1,0 +1,30 @@
+// assets/scss/_forum.scss
+
+.container {
+    .lead {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+  
+    .list-group {
+      .list-group-item {
+        @include transition(background-color, 0.2s);
+        &:hover {
+          background-color: $color-bg;
+        }
+        .d-flex {
+          h5 {
+            font-size: 1.25rem;
+            color: $color-accent;
+          }
+          small {
+            color: $color-secondary;
+          }
+        }
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,26 @@
+// assets/scss/_forms.scss
+
+.login-container, .new-topic-container {
+    .bg-light {
+      padding: 2rem;
+      border-radius: 0.5rem;
+      form {
+        .form-label {
+          font-weight: bold;
+        }
+        .form-control {
+          margin-bottom: 1rem;
+          &:focus {
+            outline: 2px solid $color-primary;
+          }
+        }
+        button {
+          @include transition(all, 0.3s);
+          &:hover {
+            background-color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+  

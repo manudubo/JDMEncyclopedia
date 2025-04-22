@@ -1,0 +1,19 @@
+// assets/scss/_header.scss
+
+.navbar {
+    background-color: $color-primary;
+    .nav-link {
+      color: $color-white;
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover {
+          background-color: $color-bg;
+        }
+      }
+    }
+  }
+  

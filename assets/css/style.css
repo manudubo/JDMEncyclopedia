@@ -410,5 +410,92 @@ footer {
   .calendar-day {
     padding: 5px;
     font-size: 0.8em; } }
+.navbar {
+  background-color: #2A2B2B; }
+  .navbar .nav-link {
+    color: #ffffff; }
+    .navbar .nav-link:hover {
+      color: #332222; }
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f5f5f5; }
+
+footer {
+  background-color: gainsboro;
+  color: #ffffff; }
+  footer .container .text-center p {
+    font-size: 0.9rem; }
+
+.login-container .bg-light, .new-topic-container .bg-light {
+  padding: 2rem;
+  border-radius: 0.5rem; }
+  .login-container .bg-light form .form-label, .new-topic-container .bg-light form .form-label {
+    font-weight: bold; }
+  .login-container .bg-light form .form-control, .new-topic-container .bg-light form .form-control {
+    margin-bottom: 1rem; }
+    .login-container .bg-light form .form-control:focus, .new-topic-container .bg-light form .form-control:focus {
+      outline: 2px solid #2A2B2B; }
+  .login-container .bg-light form button, .new-topic-container .bg-light form button {
+    transition: all 0.3s ease-in-out; }
+    .login-container .bg-light form button:hover, .new-topic-container .bg-light form button:hover {
+      background-color: #332222; }
+
+.container .lead {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem; }
+.container .list-group .list-group-item {
+  transition: background-color 0.2s ease-in-out; }
+  .container .list-group .list-group-item:hover {
+    background-color: #f5f5f5; }
+  .container .list-group .list-group-item .d-flex h5 {
+    font-size: 1.25rem;
+    color: #4D1A1A; }
+  .container .list-group .list-group-item .d-flex small {
+    color: #332222; }
+  .container .list-group .list-group-item p {
+    margin-top: 0.5rem; }
+
+.container form .form-control:focus {
+  border-color: #2A2B2B; }
+.container form button {
+  transition: background-color 0.3s ease-in-out; }
+  .container form button:hover {
+    background-color: #332222; }
+.container iframe {
+  margin-top: 1rem;
+  border: 0; }
+.container .bx {
+  margin-right: 0.5rem; }
+
+#featured img {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out; }
+  #featured img:hover {
+    transform: scale(1.02); }
+
+.news-thumbs {
+  display: flex;
+  gap: 1rem; }
+  @media (max-width: 576px) {
+    .news-thumbs {
+      flex-direction: column; } }
+  .news-thumbs img {
+    width: 100px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out; }
+    .news-thumbs img:hover {
+      opacity: 0.7; }
+
+.container .car-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: filter 0.3s ease-in-out; }
+  .container .car-card img:hover {
+    filter: brightness(0.8); }
+.container .car-card .card-body h2 {
+  font-size: 1.5rem;
+  color: #4D1A1A; }
+.container .car-card .card-body p {
+  font-size: 0.9rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+// assets/scss/_contact.scss
+
+.container {
+    form {
+      .form-control {
+        &:focus {
+          border-color: $color-primary;
+        }
+      }
+      button {
+        @include transition(background-color, 0.3s);
+        &:hover {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  
+    iframe {
+      margin-top: 1rem;
+      border: 0;
+    }
+  
+    .bx {
+      margin-right: 0.5rem;
+    }
+  }
+  
